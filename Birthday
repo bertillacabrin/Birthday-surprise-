@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Surprise</title>
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .gift {
+        font-size: 100px;
+        transition: transform 0.3s;
+    }
+
+    .gift:hover {
+        transform: scale(1.1);
+    }
+
+    .baby {
+        display: none;
+        margin-top: 20px;
+    }
+
+    .baby img {
+        width: 200px;
+    }
+
+    .sign {
+        margin-top: 10px;
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" onclick="openGift()">
+    <div id="gift" class="gift">🎁</div>
+
+    <div id="baby" class="baby">
+        <img src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png" alt="Baby">
+        <div class="sign">Happy Womb Escape! 🎉</div>
+    </div>
+</div>
+
+<script>
+function openGift() {
+    document.getElementById("gift").style.display = "none";
+    document.getElementById("baby").style.display = "block";
+}
+</script>
+
+</body>
+</html>
